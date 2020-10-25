@@ -19,38 +19,38 @@ I created a next button for the user. This will allow the user to see if the ans
 
 ## Live Link
 
-CodeQuiz[https://buildgal.github.io/codeQuiz/]
+CodeQuiz [https://buildgal.github.io/codeQuiz/]
 
 ## Questions and Options in this Code Quiz 
 1.	What is JavaScript not used for
-a.	Inputs 
-b.	Animate elements 
-c.	Do laundry 
-d.	Change a webpage 
+### a.	Inputs 
+### b.	Animate elements 
+### c.	Do laundry 
+### d.	Change a webpage 
 
 2.	Console.log is an expression that 
-a.	Prints to the debugger 
-b.	Prints to my local printer 
-c.	Prints the scope 
-d.	Prints the webpage 
+### a.	Prints to the debugger 
+### b.	Prints to my local printer 
+### c.	Prints the scope 
+### d.	Prints the webpage 
 
 3.	Arrays in JavaScript 
-a.	Only have and index in a for loop 
-b.	Begin with an index of 1 
-c.	Do not have an index 
-d.	Begin with an index of 0 
+### a.	Only have and index in a for loop 
+### b.	Begin with an index of 1 
+### c.	Do not have an index 
+### d.	Begin with an index of 0 
 
 4.	Specific data in JavaScript is best formatted in which object form?
-a.	Punch cards
-b.	Properties and values 
-c.	JSON
-d.	Floppy Disk 
+### a.	Punch cards
+### b.	Properties and values 
+### c.	JSON
+### d.	Floppy Disk 
 
 5.	How do you declare a variable in JavaScript? 
-a.	Let = 
-b.	Use your voice 
-c.	Declare= 
-d.	Variable= 
+### a.	Let = 
+### b.	Use your voice 
+### c.	Declare= 
+### d.	Variable=
 
 ## Screenshot 
 **to come once timer is added**
