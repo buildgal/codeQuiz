@@ -52,5 +52,8 @@ b.	Use your voice
 c.	Declare= 
 d.	Variable=
 
+## Known Issues 
+The buttons display at the beginning of the quiz. These shoould not appear until the quiz begins. 
+
 ## Screenshot 
 **to come once timer is added**

@@ -3,6 +3,8 @@ let Q1 = document.querySelector("#Q1");
 let btns= document.querySelector("body > div");
 let nextBtns = document.querySelector("#nextBtn");
 let startBtn= document.querySelector("#StaBtn");
+let instruction= document.querySelector("body > p");
+let check= document.querySelector("#correct");
 
 
 let elA= document.querySelector("#elA");
@@ -10,7 +12,16 @@ let elB= document.querySelector("#elB");
 let elc= document.querySelector("#elC");
 let elD= document.querySelector("#elD");
 
-let check= document.querySelector("#correct");
+let minDisplay= document.querySelector("#minutes");
+let secDisplay= document.querySelector("#seconds")
+
+let totalTime= 300;
+
+
+
+
+
+
 
 //start button selected display the first question with options
 startBtn.addEventListener("click", function(){
@@ -23,8 +34,9 @@ startBtn.addEventListener("click", function(){
 function question1 (){
     Q1.textContent="1.What is JavaScript not used for";
     startBtn.style.display="none";
+    instruction.style.display="none";
 
-        //setting the text for each button in question 1
+        //setting the text for each buttoton in question 1
         elA.textContent="A. Inputs";
         elB.textContent="B. Animate elements"; 
         elC.textContent="C. Do laundry";
@@ -36,6 +48,8 @@ function question1 (){
 
         elA.addEventListener("click", function (){
             check.textContent="Wrong!"
+            totalTime-10;
+
         })
 
         elB.addEventListener("click", function (){
@@ -189,92 +203,5 @@ function quizResults() {
         elB.style.display= "none";
         elC.style.display= "none";
         elD.style.display= "none";
-
-        //also take away all the questions 
-        //display which ks were wrong 
-        //add links that will show the correct answers 
+ 
 }
-
-
-
-
-//navigates through the questions 
-/*
-nextBtns.addEventListener("click", function(){
-    nextCount++;
-    if (nextCount === 1){
-        question2();
-    }
-
-    else if (nextCount === 2){
-        question3();
-    }
-
-    else if (nextCount === 3){
-        question4();
-    }
-
-    else if (nextCount === 4){
-        question5();
-    }
-
-    else if (nextCount === 5){
-        quizResults();
-    }
-    
-    else if (nextCount >5){
-        question1();
-    }
-    
-
-})
-*/
-
-
-
-
-        //need to know which question I am on so that when click the next button it shows me the correct questions 
-
-        //click 1= quest 1 
-        //click 2= quest 2 and so on
-
-
-
-
-
-
-//the previous question and answer displays when previous is selected 
-
-
-//count the number of correct questions 
-//when a button is selected highlight the button and store the answer 
-//if a different button is selected then store that answer 
-//check if the button is answer is correct 
-
-
-/*
-prevBtn.addEventListener("click", function(){
-    prevCount++;
-    
-    if (prevCount === 1){
-        question4();
-    }
-
-    else if (prevCount === 2){
-        question3();
-    }
-
-    else if (prevCount === 3){
-        question2();
-    }
-
-    else if (prevCount ===4){
-        question1();
-    }
-*/
-
-/*refactor the code 
-you would need loop less than five then create this 
-each time it moves up add 1 to ID 
-also loop through the list to give it a different name 
- */
