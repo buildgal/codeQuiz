@@ -7,13 +7,21 @@ let prevBtn= document.querySelector("#prevBtn");
 let nextCount= 0;   
 let prevCount=0;
 
+let elA= document.querySelector("#elA");
+let elB= document.querySelector("#elB");
+let elc= document.querySelector("#elC");
+let elD= document.querySelector("#elD");
+
+
+
+//hide the buttons here 
 
 
 
 //start button selected display the first question with options
 startBtn.addEventListener("click", function(){
     question1();
-})
+    })
 
 
 //create a function for question  
@@ -22,127 +30,56 @@ function question1 (){
     Q1.textContent="1.What is JavaScript not used for";
     startBtn.style.display="none";
 
-    //creating the answer buttons 
-    let AnsA= document.createElement("BUTTON");
-    let AnsB= document.createElement("BUTTON");
-    let AnsC= document.createElement("BUTTON");
-    let AnsD= document.createElement("BUTTON");
-
-    //adding a class attribute 
-    AnsA.setAttribute("class", "buttons");
-    AnsB.setAttribute("class", "buttons");
-    AnsC.setAttribute("class", "buttons");
-    AnsD.setAttribute("class", "buttons");
-
-    //adding an ID attribute 
-    AnsA.setAttribute("id", "button1");
-    AnsB.setAttribute("id", "button2");
-    AnsC.setAttribute("id", "button3");
-    AnsD.setAttribute("id", "button4");
-
-    //this allows the element to display text 
-    btns.appendChild(AnsA);
-    btns.appendChild(AnsB);
-    btns.appendChild(AnsC);  
-    btns.appendChild(AnsD);
-
-    //setting the text for each button 
-    AnsA.textContent="A. Could be close";
-    AnsB.textContent="B. correct answer"; 
-    AnsC.textContent="C. C's get degrees";
-    AnsD.textContent="D. never D!";
+        //setting the text for each button in question 1
+        elA.textContent="A. Inputs";
+        elB.textContent="B. Animate elements"; 
+        elC.textContent="C. Do laundry";
+        elD.textContent="D. Chnage a webpage";
 }
 
 function question2 () {
     Q1.textContent="2.Console.log() is an expression that";
-
-        let choiceBtn=document.querySelector(".buttons")
-
-        let AnsA= document.querySelector("#button1");
-        let AnsB= document.querySelector("#button2");
-        let AnsC= document.querySelector("#button3");
-        let AnsD= document.querySelector("#button4");
-        
-        btns.appendChild(AnsA);
-        btns.appendChild(AnsB);
-        btns.appendChild(AnsC);  
-        btns.appendChild(AnsD);
-    
-        AnsA.textContent="A. second question";
-        AnsB.textContent="B. second question";
-        AnsC.textContent="C. correct answer";
-        AnsD.textContent="D. second question";
-
-        //when button is selected highlight it 
-
-       choiceBtn.addEventListener("click", event => {
-           choiceBtn.style.color="red";
-       })
-
-
-
+        //setting the text for each button in question 1
+        elA.textContent="A. Prints to the debugger ";
+        elB.textContent="B. Prints to my local printer "; 
+        elC.textContent="C. Prints the scope";
+        elD.textContent="D. Prints the webpage";
 }
+        
+
+
 
 function question3 () {
     Q1.textContent="3.Arrays in JavaScript";
 
-        let AnsA= document.querySelector("#button1");
-        let AnsB= document.querySelector("#button2");
-        let AnsC= document.querySelector("#button3");
-        let AnsD= document.querySelector("#button4");
-        
-        btns.appendChild(AnsA);
-        btns.appendChild(AnsB);
-        btns.appendChild(AnsC);  
-        btns.appendChild(AnsD);
-    
-        AnsA.textContent="A. 3 question";
-        AnsB.textContent="B. 3 question";
-        AnsC.textContent="C. 3 question";
-        AnsD.textContent="D. 3 question";
-}
+        //setting the text for each button in question 1
+        elA.textContent="A. Only have and index in a for loop";
+        elB.textContent="B. Begin with an index of 1 "; 
+        elC.textContent="C. Do not have an index ";
+        elD.textContent="D. Begin with an index of 0";
+    }
 
 function question4 () {
     Q1.textContent="4.Specific data in JavaScript is best formatted in which object form?";
 
-        let AnsA= document.querySelector("#button1");
-        let AnsB= document.querySelector("#button2");
-        let AnsC= document.querySelector("#button3");
-        let AnsD= document.querySelector("#button4");
-        
-        btns.appendChild(AnsA);
-        btns.appendChild(AnsB);
-        btns.appendChild(AnsC);  
-        btns.appendChild(AnsD);
-    
-        AnsA.textContent="A. 4 question";
-        AnsB.textContent="B. 4 question";
-        AnsC.textContent="C. 4 question";
-        AnsD.textContent="D. 4 question";
+        elA.textContent="A. Punch cards";
+        elB.textContent="B. Properties and values";
+        elC.textContent="C. JSON";
+        elD.textContent="D. Floppy Disk";
 }
 
 function question5 () {
     Q1.textContent="5.How do you declare a variable in JavaScript?";
 
-        let AnsA= document.querySelector("#button1");
-        let AnsB= document.querySelector("#button2");
-        let AnsC= document.querySelector("#button3");
-        let AnsD= document.querySelector("#button4");
-        
-        btns.appendChild(AnsA);
-        btns.appendChild(AnsB);
-        btns.appendChild(AnsC);  
-        btns.appendChild(AnsD);
-    
-        AnsA.textContent="A. 5 question";
-        AnsB.textContent="B. 5 question";
-        AnsC.textContent="C. 5 question";
-        AnsD.textContent="D. 5 question";
+        elA.textContent="A. Let=";
+        elB.textContent="B. Use your voice";
+        elC.textContent="C. Declare=";
+        elD.textContent="D. Variable=";
 }
 
 function quizResults() {
     Q1.textContent="RESULTS";
-
+/*
         let AnsA= document.querySelector("#button1");
         let AnsB= document.querySelector("#button2");
         let AnsC= document.querySelector("#button3");
@@ -152,11 +89,11 @@ function quizResults() {
         btns.appendChild(AnsB);
         btns.appendChild(AnsC);  
         btns.appendChild(AnsD);
-    
-        AnsA.style.display= "none";
-        AnsB.style.display= "none";
-        AnsC.style.display= "none";
-        AnsD.style.display= "none";
+    */
+        elA.style.display= "none";
+        elB.style.display= "none";
+        elC.style.display= "none";
+        elD.style.display= "none";
 
         //also take away all the questions 
         //display which ks were wrong 
