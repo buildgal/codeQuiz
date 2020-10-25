@@ -5,7 +5,12 @@ let nextBtns = document.querySelector("#nextBtn");
 let startBtn= document.querySelector("#StaBtn");
 let instruction= document.querySelector("body > p");
 let check= document.querySelector("#correct");
+let result= document.querySelector("#resultPg");
+result.style.display="none";
 
+let score= document.querySelector("#totalScore");
+score.style.display="none";
+let correct=0;
 
 let elA= document.querySelector("#elA");
 let elB= document.querySelector("#elB");
@@ -16,12 +21,6 @@ let minDisplay= document.querySelector("#minutes");
 let secDisplay= document.querySelector("#seconds")
 
 let totalTime= 300;
-
-
-
-
-
-
 
 //start button selected display the first question with options
 startBtn.addEventListener("click", function(){
@@ -43,12 +42,15 @@ function question1 (){
         elD.textContent="D. Change a webpage";
 
         elC.addEventListener("click", function (){
-            check.textContent="Correct!"
+            check.textContent="Correct!";
+            correct+1;
+            
+
         })
 
         elA.addEventListener("click", function (){
             check.textContent="Wrong!"
-            totalTime-10;
+            //totalTime-10;
 
         })
 
@@ -82,6 +84,7 @@ function question2 () {
 
         elA.addEventListener("click", function (){
             check.textContent="Correct!"
+            correct+1;
         })
 
         elC.addEventListener("click", function (){
@@ -117,6 +120,7 @@ function question3 () {
 
         elD.addEventListener("click", function (){
             check.textContent="Correct!"
+            correct+1;
         })
 
         elC.addEventListener("click", function (){
@@ -147,6 +151,7 @@ function question4 () {
 
         elB.addEventListener("click", function (){
             check.textContent="Correct!"
+            correct+1;
         })
 
         elC.addEventListener("click", function (){
@@ -177,6 +182,7 @@ function question5 () {
 
         elA.addEventListener("click", function (){
             check.textContent="Correct!"
+            correct++;
         })
 
         elC.addEventListener("click", function (){
@@ -203,5 +209,18 @@ function quizResults() {
         elB.style.display= "none";
         elC.style.display= "none";
         elD.style.display= "none";
+        nextBtns.style.display="none";
+        result.style.display="block";
+        score.style.display="block";
+        score.textContent=correct;
+        
+     
+    
+
+
+    
+
+        //should display how many answers were incorrect
+        //should display a form to add initials 
  
 }
