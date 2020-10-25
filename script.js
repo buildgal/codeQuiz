@@ -12,11 +12,7 @@ let elB= document.querySelector("#elB");
 let elc= document.querySelector("#elC");
 let elD= document.querySelector("#elD");
 
-
-
-//hide the buttons here 
-
-
+let check= document.querySelector("#correct");
 
 //start button selected display the first question with options
 startBtn.addEventListener("click", function(){
@@ -34,7 +30,30 @@ function question1 (){
         elA.textContent="A. Inputs";
         elB.textContent="B. Animate elements"; 
         elC.textContent="C. Do laundry";
-        elD.textContent="D. Chnage a webpage";
+        elD.textContent="D. Change a webpage";
+
+        elC.addEventListener("click", function (){
+            check.textContent="Correct!"
+            question2();        })
+
+        elA.addEventListener("click", function (){
+            check.textContent="Wrong!"
+        })
+
+        elB.addEventListener("click", function (){
+            check.textContent="Wrong!"
+        })
+
+        elD.addEventListener("click", function (){
+            check.textContent="Wrong!"
+        })
+
+        
+     
+        
+
+
+        
 }
 
 function question2 () {
@@ -79,17 +98,6 @@ function question5 () {
 
 function quizResults() {
     Q1.textContent="RESULTS";
-/*
-        let AnsA= document.querySelector("#button1");
-        let AnsB= document.querySelector("#button2");
-        let AnsC= document.querySelector("#button3");
-        let AnsD= document.querySelector("#button4");
-        
-        btns.appendChild(AnsA);
-        btns.appendChild(AnsB);
-        btns.appendChild(AnsC);  
-        btns.appendChild(AnsD);
-    */
         elA.style.display= "none";
         elB.style.display= "none";
         elC.style.display= "none";
