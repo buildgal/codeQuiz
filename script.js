@@ -12,7 +12,14 @@ let prevCount=0;
 
 //start button selected display the first question with options
 startBtn.addEventListener("click", function(){
-    Q1.textContent="Question 1";
+    question1();
+})
+
+
+//create a function for question  
+
+function question1 (){
+    Q1.textContent="1.What is JavaScript not used for";
     startBtn.style.display="none";
 
     //creating the answer buttons 
@@ -44,12 +51,12 @@ startBtn.addEventListener("click", function(){
     AnsB.textContent="B. correct answer"; 
     AnsC.textContent="C. C's get degrees";
     AnsD.textContent="D. never D!";
-})
-
-//create a function for question  
+}
 
 function question2 () {
-    Q1.textContent="Next Question Displays";
+    Q1.textContent="2.Console.log() is an expression that";
+
+        let choiceBtn=document.querySelector(".buttons")
 
         let AnsA= document.querySelector("#button1");
         let AnsB= document.querySelector("#button2");
@@ -65,10 +72,19 @@ function question2 () {
         AnsB.textContent="B. second question";
         AnsC.textContent="C. correct answer";
         AnsD.textContent="D. second question";
+
+        //when button is selected highlight it 
+
+       choiceBtn.addEventListener("click", event => {
+           choiceBtn.style.color="red";
+       })
+
+
+
 }
 
 function question3 () {
-    Q1.textContent="Third";
+    Q1.textContent="3.Arrays in JavaScript";
 
         let AnsA= document.querySelector("#button1");
         let AnsB= document.querySelector("#button2");
@@ -87,7 +103,7 @@ function question3 () {
 }
 
 function question4 () {
-    Q1.textContent="Fourth";
+    Q1.textContent="4.Specific data in JavaScript is best formatted in which object form?";
 
         let AnsA= document.querySelector("#button1");
         let AnsB= document.querySelector("#button2");
@@ -106,7 +122,7 @@ function question4 () {
 }
 
 function question5 () {
-    Q1.textContent="Five";
+    Q1.textContent="5.How do you declare a variable in JavaScript?";
 
         let AnsA= document.querySelector("#button1");
         let AnsB= document.querySelector("#button2");
@@ -150,7 +166,7 @@ function quizResults() {
 
 
 
-
+//navigates through the questions 
 nextBtns.addEventListener("click", function(){
     nextCount++;
     if (nextCount === 1){
@@ -172,8 +188,10 @@ nextBtns.addEventListener("click", function(){
     else if (nextCount === 5){
         quizResults();
     }
-
-
+    
+    else if (nextCount >5){
+        question1();
+    }
 
 })
 
@@ -219,3 +237,9 @@ prevBtn.addEventListener("click", function(){
         question1();
     }
 */
+
+/*refactor the code 
+you would need loop less than five then create this 
+each time it moves up add 1 to ID 
+also loop through the list to give it a different name 
+ */
