@@ -22,7 +22,7 @@ let score= document.querySelector("#totalScore");
 score.style.display="none";
 let total=1; // total question 
 
-//making sure the buttons do not display 
+//making sure the buttons do no t display 
 elA.style.display="none";
 elB.style.display="none";
 elC.style.display="none";
@@ -67,13 +67,13 @@ function getFormattedSeconds(){
 
 function setTime() {
     let minutes;
-  
-    if (status === "Working") {
-      minutes = 1;
-    }
-  
-    clearInterval(interval);
+      minutes = 5;
+    
     totalSeconds = minutes * 60;
+
+    if (check==="Wrong!"){
+        totalSeconds=(minutes*60)-10;
+    }
   }
 
 function renderTime() {
@@ -83,10 +83,9 @@ function renderTime() {
   
    // ..and then checks to see if the time has run out
     if (secondsElapsed >= totalSeconds) {
-      if (status === "Working") {
         quizResults();
         stopTimer();
-    }
+    
 }
 }
 
@@ -108,6 +107,11 @@ function startTimer() {
     }
   }
 
+  function stopTimer() {
+    secondsElapsed = 0;
+    //setTime();
+    renderTime();
+  }
 
 //start button selected display the first question with options
 startBtn.addEventListener("click", function(){
@@ -117,6 +121,8 @@ startBtn.addEventListener("click", function(){
     
 
     })
+
+
 
 
 //create a function for question  
@@ -145,8 +151,7 @@ function question1 (){
         })
 
         elA.addEventListener("click", function (){
-            check.textContent="Wrong!";
-           
+            check.textContent="Wrong!";           
         })
 
         elB.addEventListener("click", function (){
@@ -320,8 +325,11 @@ function quizResults() {
         nextBtns.style.display="none";
         result.style.display="block";
         initals.style.display="block";
-        
-        
+        timer.style.display="none";
+        minDisplay.style.display="none";
+        secDisplay.style.display="none";
+
+        totalResult();
 }
 
 

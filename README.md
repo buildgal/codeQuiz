@@ -17,6 +17,12 @@ THEN I can save my initials and score
 ## Differences from Acceptance Criteria
 I created a next button for the user. This will allow the user to see if the answer they selected is correct or incorrect before moving on the the next question.
 
+## Count 
+The count currently only accuratelycounts the correct answers. 
+
+## Timer 
+The code from the timer is framed based off the tomato time from the class work. 
+
 ## Live Link
 
 CodeQuiz [https://buildgal.github.io/codeQuiz/]
