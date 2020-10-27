@@ -6,7 +6,9 @@ let startBtn= document.querySelector("#StaBtn");
 let instruction= document.querySelector("body > p");
 let check= document.querySelector("#correct");
 let result= document.querySelector("#resultPg");
-let timer= document.querySelector("#timer");
+let timer= document.querySelector("#timer"); 
+let initals= document.querySelector("#initals");
+initals.style.display="none";
 
 //defining the variables for the answer choices 
 let emlA= document.querySelector("#elA");
@@ -31,7 +33,7 @@ elE.style.display="none";
 let minDisplay= document.querySelector("#minutes");
 let secDisplay= document.querySelector("#seconds")
 
-let totalSeconds = 300;
+let totalSeconds = 0;
 let secondsElapsed = 0;
 let status = "Working";
 let interval;
@@ -67,7 +69,7 @@ function setTime() {
     let minutes;
   
     if (status === "Working") {
-      minutes = 5;
+      minutes = 1;
     }
   
     clearInterval(interval);
@@ -82,13 +84,10 @@ function renderTime() {
    // ..and then checks to see if the time has run out
     if (secondsElapsed >= totalSeconds) {
       if (status === "Working") {
-        alert("Time for a break!");
-      } else {
-        alert("Time to get back to work!");
-      }
-  
-      stopTimer();
+        quizResults();
+        stopTimer();
     }
+}
 }
 
 function startTimer() {
@@ -320,9 +319,8 @@ function quizResults() {
 
         nextBtns.style.display="none";
         result.style.display="block";
-        score.style.display="block";
-        score.textContent=result;
-    
+        initals.style.display="block";
+        
         
 }
 
